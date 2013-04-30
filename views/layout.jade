@@ -1,0 +1,17 @@
+doctype 5
+html
+  head
+    title HTML5
+    meta(name='author', content='John Stockton')
+    link(href='http://fonts.googleapis.com/css?family=Ubuntu:700|Ubuntu+Mono|Crimson+Text:400,700,400italic',rel='stylesheet') 
+    link(rel='stylesheet', href='/css/style.css')
+    link(rel='stylesheet', href='/css/fonts.css')
+  body
+    block content
+
+    script(type='text/javascript', src='/js/libs/impress.js')
+    script(type='text/javascript', src='http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js')
+    script window.jQuery || document.write('<script type="text/javascript" src="/js/libs/jquery-1.9.1.min.js"><\\/script>')
+    script(src='/js/libs/prefixfree.min.js')
+    block javascripts
+
