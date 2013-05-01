@@ -1,0 +1,7 @@
+# Folders to ignore
+node_modules
+pids
+logs
+*.swp
+*.bak
+tags

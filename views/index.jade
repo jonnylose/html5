@@ -11,113 +11,27 @@ block content
     p
       | You are viewing simplified view, but most of the CSS 3D will not work for you, sorry.
   #impress
-    #title.step
+    #title.step(data-x='-1000',data-y='-1500')
       h1
-        span.short A very short introduction to
+        span HTML5
         span.css
-          | CSS
-          span.d3 3D
-        span.transforms transforms
+          | CSS3
+        span.short (y javascript!)
       span.author
         i by
         br
-        span.name Bartek Szopka
-        a(href='http://twitter.com/bartaz') @bartaz
-        a.cognifide(href='http://cognifide.com')
-    #transforms2d.step(data-x='-620', data-y='500', data-rotate='90', data-scale='0.5')
-      h2 2D transforms
-      .face.target
-        | 2D
-        span.axis.x
-        span.axis.y
-      code.snippet
-        | transform:
-        span.code(data-property='transform')
-        span.switch.disabled translate(200px,100px)
-        br
-        span.indent           
-        span.switch rotate(45deg)
-        br
-        span.indent           
-        span.switch.disabled scale(2)
-        br
-        span.indent           
-        span.switch skew(30deg)
-        br
-        span.indent           
-        span.switch.disabled matrix(-1,0,0,1,0,0)
-    #transforms3d.step(data-x='-30', data-y='540', data-rotate='190', data-scale='0.6')
-      h2 3D transforms
-      .face.target
-        | 3D
-        span.axis.x
-        span.axis.y
-        span.axis.z
-      code.snippet
-        | transform:
-        br
-        span.code(data-property='transform')
-          span.indent    
-          label.switch.slider(for='transform3d-perspective-slider')
-            | perspective(
-            span.val 600
-            | px)
-            input#transform3d-perspective-slider(type='range', min='200', max='2000', value='600')
-          br
-          span.indent    
-          label.switch.slider(for='transform3d-translateX-slider')
-            | translateX(
-            span.val -100
-            | px)
-            input#transform3d-translateX-slider(type='range', min='-500', max='500', value='-100')
-          label.switch.disabled.slider(for='transform3d-translateY-slider')
-            | translateY(
-            span.val 100
-            | px)
-            input#transform3d-translateY-slider(type='range', min='-200', max='200', value='100')
-          label.switch.disabled.slider(for='transform3d-translateZ-slider')
-            | translateZ(
-            span.val 100
-            | px)
-            input#transform3d-translateZ-slider(type='range', min='-500', max='500', value='100')
-          br
-          span.indent    
-          label.switch.slider(for='transform3d-rotateX-slider')
-            | rotateX(
-            span.val 60
-            | deg)
-            input#transform3d-rotateX-slider(type='range', min='0', max='360', value='60')
-          label.switch.disabled.slider(for='transform3d-rotateY-slider')
-            | rotateY(
-            span.val 90
-            | deg)
-            input#transform3d-rotateY-slider(type='range', min='0', max='360', value='90')
-          label.switch.disabled.slider(for='transform3d-rotateZ-slider')
-            | rotateZ(
-            span.val 30
-            | deg)
-            input#transform3d-rotateZ-slider(type='range', min='0', max='360', value='30')
-          br
-          span.indent    
-          label.switch.disabled.slider(for='transform3d-rotate3d-slider')
-            | rotate3d(1,1,0,
-            span.val 60
-            | deg)
-            input#transform3d-rotate3d-slider(type='range', min='0', max='360', value='60')
-          br
-          span.indent    
-          label.switch.disabled.slider(for='transform3d-scaleX-slider')
-            | scaleX(
-            span.val 0.5
-            | )
-            input#transform3d-scaleX-slider(type='range', min='-10', max='20', value='5', step='1', data-divider='10', data-pad='4')
-          label.switch.disabled.slider(for='transform3d-scaleY-slider')
-            | scaleY(
-            span.val 0.5
-            | )
-            input#transform3d-scaleY-slider(type='range', min='-10', max='20', value='5', step='1', data-divider='10')
-          label.switch.disabled.slider(for='transform3d-scaleZ-slider')
-            | scaleZ(
-            span.val 0.5
-            | )
-            input#transform3d-scaleZ-slider(type='range', min='-10', max='20', value='5', step='1', data-divider='10')
+        span.name Jordi Anglada
+    .step(data-x='300', data-y='-1500')
+      h2 HTML5
+      ul
+        li Nuevo estándar
+        li Web semántica
+          code.snippet
+            span.indent #{'<header><nav><footer><section>'}
+        li Mejoras en formularios
+        li Multimedia: Canvas, Audio & Vídeo
+        li Nuevas APIs
+          code.snippet
+            span.indent Geoposicionamiento, Storage, WebSockets, WebWorkers, Drag&Drop...
+        li WebGL
+          
