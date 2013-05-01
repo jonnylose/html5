@@ -5,9 +5,11 @@
 
 var express = require('express')
   , routes = require('./routes')
-  , user = require('./routes/user')
   , http = require('http')
-  , path = require('path');
+  , path = require('path')
+  , server
+  , io
+  , currentPage = 0;
 
 var app = express();
 
@@ -29,8 +31,20 @@ app.configure('development', function(){
 });
 
 app.get('/', routes.index);
-app.get('/users', user.list);
 
-http.createServer(app).listen(app.get('port'), function(){
+server = http.createServer(app);
+server.listen(app.get('port'), function(){
   console.log("Express server listening on port " + app.get('port'));
+});
+
+io = require('socket.io').listen(server);
+io.sockets.on('connection', function (socket) {
+  io.sockets.emit('gotopag', { pag: currentPage });
+  socket.on('changePag', function (data) {
+    console.log('changePag: ' + currentPage + ' to ' + data.pag);
+    if(data.pag != currentPage) {
+      currentPage = data.pag;
+      io.sockets.emit('gotopag', { pag: currentPage });
+    }
+  });
 });
