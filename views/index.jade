@@ -107,15 +107,58 @@ block content
         li Traslate[X,Y,Z], rotate[X,Y,Z], scale[X,Y,Z], perspective
         li 
           a(href='http://desandro.github.io/3dtransforms/examples/carousel-01.html', target='_black') Ejemplo
-    #html5.step(data-x='-3000', data-y='-3000', data-rotate='90', data-scale='4')
+    #html5.step(data-x='-3000', data-y='-3000', data-rotate='270', data-scale='40')
       h2 HTML5
       h3 Semántica
       ul
-        li Traslate, rotate, scale, skew, matrix
-        li
-          a(href='http://www.csslab.cl/ejemplos/css3/prueba3.html', target='_black') Ejemplo
-      h4 3D
+        li No más div > div > div > div
+      img(src='/img/html5_estructura.png')
       ul
-        li Traslate[X,Y,Z], rotate[X,Y,Z], scale[X,Y,Z], perspective
-        li 
-          a(href='http://desandro.github.io/3dtransforms/examples/carousel-01.html', target='_black') Ejemplo
+        li Mejora accesibilidad
+        li Mejora en buscadores
+        li Mejor organización (y más mantenible!)
+    .step(data-x='-6000', data-y='-5000', data-z='2000', data-z='-10', data-rotate-y='5')
+      h2 HTML5
+      h3 Mejoras en formularios
+      ul
+        li Input type (numbre, email, date...)
+        li Atributos (Placeholders, autofocus, required, patterns)
+        li Progress
+        code.snippet
+          form
+            span number
+            input(type='number',min='1',max='5')
+            br
+            span email (required)
+            input(type='email', required, autofocus)
+            br
+            span date
+            input(type='date',min='1',max='5')
+            br
+            span placeholder
+            input(type='text', placeholder='escribe lo que quieras')
+            br
+            span pattern
+            input(type='text', placeholder='escribe solo letras', pattern='[A-Za-z]*')
+            br
+            span progress
+            progress(value='22', max='100')
+            input(type='submit')
+        li Atributo Data: Accesible desde jQuery.data('customAttr')
+        code.snippet
+          | data-custom-attr="valor"
+    .step(data-x='-12000', data-y='-5000')
+      h2 HTML5
+      h3 Multimedia: Canvas
+      ul
+        li Api de dibujo
+        li Tratamiento de imágenes
+        li Ejemplos
+          ul
+            li
+              a(href='http://diveintohtml5.info/examples/canvas-halma.html',target='_blank') Juego
+            li
+              a(href='http://seriouslyjs.org/',target='_blank') Tratamiento imágenes
+            li
+              a(href='http://mudcu.be/sketchpad/',target='_blank') Paint
+          
