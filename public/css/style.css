@@ -768,4 +768,15 @@ label.slider input[type=range]::-webkit-slider-thumb {
     position: static;
     margin: 20px auto;
 }
-
+h4 {
+  font-weight: bold;
+}
+.textShadow {
+    text-shadow: 5px 5px 10px #000000;
+}
+.boxShadow {
+    box-shadow: 10px 10px 5px #888;
+}
+.degradado {
+    background: linear-gradient(orange,pink);
+}
